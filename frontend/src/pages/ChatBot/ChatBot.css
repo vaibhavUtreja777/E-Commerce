@@ -1,0 +1,195 @@
+  .ChatBot {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .ChatBot header {
+    background-color: #181717;
+    height: 10vh;
+    min-height: 50px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    max-width: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .ChatBot section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    /* background-color: rgb(40, 37, 53); */
+  }
+  
+  .ChatBot main {
+    padding: 10px;
+    height: 80vh;
+    margin: 10vh 0 10vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ChatBot main::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+  
+  .ChatBot main::-webkit-scrollbar-track {
+    background: #1e1e24;
+  }
+  
+  .ChatBot main::-webkit-scrollbar-thumb {
+    background: #6649b8;
+  }
+  
+  .ChatBot form {
+    height: 10vh;
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(24, 23, 23);
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    font-size: 1.5rem;
+  }
+  .submit-button{
+    width: 20%;
+    background-color: #0b93f6;
+    background-color: #0b93f6; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.25rem;
+  }
+  .submit-button:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  
+  .ChatBot input {
+    line-height: 1.5;
+    width: 100%;
+    font-size: 1.5rem;
+    background-color: rgb(255, 252, 249);
+    color: black;
+    outline: none;
+    border: 0.5px solid black;
+    padding: 0 10px;
+  }
+  
+  
+  .ChatBot ul, li {
+    text-align: left;
+    list-style: none;
+  }
+  
+  .ChatBot p {
+    max-width: 1000px;
+    margin-bottom: 12px;
+    line-height: 24px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    position: relative;
+    color: white;
+    text-align: center;
+  }
+  .product-recommend{
+    /* max-width: 1000px; */
+    width: 750px;
+    margin-bottom: 12px;
+    line-height: 24px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    position: relative;
+    color: white;
+    background-color: #e5e5ea;
+    text-align: center;
+  }
+  .products{
+    display: flex;
+  }
+  
+  .message {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .sent {
+    flex-direction: row-reverse;
+  }
+  
+  .sent p {
+    color: white;
+    background: #0b93f6;
+    align-self: flex-end;
+  }
+  .received p {
+    /* background: #e5e5ea; */
+    color: black;
+  }
+  .loading {
+    display: flex;
+    flex-direction: column;
+  }
+  .loading-circles{
+    display: flex;
+    flex-direction: row;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    margin-top: 10px;
+  }
+  .loading .circle {
+
+    height: 10px;
+    width: 10px;
+    background: #000;
+    border-radius: 50%;
+    margin: 0.5rem;
+    animation: jump 0.5s ease-in infinite;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  }
+  .loading{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 10px;
+    /* width: 10px; */
+
+    /* background-color: #fff; */
+  }
+  
+  .circle:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  .circle:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  
+  @keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
